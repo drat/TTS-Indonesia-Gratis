@@ -1,24 +1,12 @@
 # TTS-Indonesia-Gratis
 
+![Screen Shot 2024-07-23 at 3 20 33 AM](https://github.com/user-attachments/assets/2eac1c9e-3621-43ea-b86b-c87c72883995)
+
 Aplikasi ini digunakan untuk menghasilkan suara berbasis teks dengan berbagai pilihan pembicara. Teknologi yang digunakan meliputi model text-to-speech (TTS) yang canggih dengan konversi teks ke fonem (G2P). Model ini dilatih khusus untuk bahasa Indonesia, Jawa, dan Sunda.
 
 ## Data
 
 - [Indonesian Azure TTS](https://depia.wiki/files/azure-tts.tar)
-
-## Example
-
-`Ardi (Azure)`:
-
-https://user-images.githubusercontent.com/72781956/183240414-b1127e83-6ddd-427c-b58d-386c377f15b4.mp4
-
-`Gadis (Azure)`:
-
-https://user-images.githubusercontent.com/72781956/183240420-a5d0d335-af4a-4563-a744-40f6795955c5.mp4
-
-`Wibowo (Audiobook)`:
-
-https://user-images.githubusercontent.com/72781956/184360026-c81ac336-c9f1-48ee-97fb-907d66b7f343.mp4
 
 ## Fitur
 
@@ -28,6 +16,9 @@ https://user-images.githubusercontent.com/72781956/184360026-c81ac336-c9f1-48ee-
 - Tema khusus dengan gradasi warna kuning ke putih.
 
 ## Pembicara yang Tersedia
+![ardi](https://github.com/user-attachments/assets/d0b82dea-7b14-4347-91f5-27574d3bcbb1)
+![gadis](https://github.com/user-attachments/assets/b016cccb-7f7c-4643-8551-597fd56252bb)
+![wibowo](https://github.com/user-attachments/assets/26e29e38-c364-4bbb-b71f-028c7dfeccd1)
 
 - **Wibowo**: Suara jantan berwibawa
 - **Ardi**: Suara lembut dan hangat
@@ -44,9 +35,19 @@ https://user-images.githubusercontent.com/72781956/184360026-c81ac336-c9f1-48ee-
 
 ## Contoh Suara
 
-`Wibowo`:
 
-audio_samples/wibowo.wav
+https://github.com/user-attachments/assets/905c4d71-686d-4270-a6dd-f134fa8dbefc
+
+
+https://github.com/user-attachments/assets/a0d2089b-4a92-4eb4-8f1f-02b60294ce93
+
+
+https://github.com/user-attachments/assets/3601206d-3a9f-41cc-ab7a-2c36bdbbd359
+
+
+https://github.com/user-attachments/assets/ce1730e2-340b-41ea-b436-d691328a07af
+
+
 
 - [Wibowo](audio_samples/wibowo.wav)
 - [Gadis](audio_samples/gadis.wav)
