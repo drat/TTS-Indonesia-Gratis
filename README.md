@@ -2,6 +2,8 @@
 
 ![Screen Shot 2024-07-23 at 3 20 33 AM](https://github.com/user-attachments/assets/2eac1c9e-3621-43ea-b86b-c87c72883995)
 
+![https://deddy-tts-indonesiaku-gratis.hf.space](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-xl-dark.svg)
+
 Aplikasi ini digunakan untuk menghasilkan suara berbasis teks dengan berbagai pilihan pembicara. Teknologi yang digunakan meliputi model text-to-speech (TTS) yang canggih dengan konversi teks ke fonem (G2P). Model ini dilatih khusus untuk bahasa Indonesia, Jawa, dan Sunda.
 
 ## Data
