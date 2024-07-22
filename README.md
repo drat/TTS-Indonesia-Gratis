@@ -60,6 +60,35 @@ https://github.com/user-attachments/assets/ce1730e2-340b-41ea-b436-d691328a07af
 - [G2P](https://github.com/kaldi-asr/g2p-seq2seq) untuk konversi teks ke fonem
 - Model TTS yang dilatih khusus untuk bahasa Indonesia, Jawa, dan Sunda
 
+# Unduh Model TTS Bahasa Indonesia
+
+File Model dapat diunduh di : [Releases](https://github.com/Wikidepia/indonesian-tts/releases/) tab.
+
+**DO NOT USE FOR COMMERCIAL PURPOSES!**
+
+## Model changelog
+
+### v1.2 (Aug 12, 2022)
+
+Finetuned from v1.1 model on:
+
+- 4 hours of Audiobook dataset
+- 2000 sample of Azure TTS
+- High quality TTS data for Javanese & Sundanese
+
+### v1.1 (Aug 6, 2022)
+
+Finetuned from LJSpeech model on:
+
+- 4 hours of Audiobook dataset
+- 2000 sample of Azure TTS
+
+### v1.0 (Jun 23, 2022)
+
+Trained from scratch on:
+
+- 4 hours of Audiobook dataset.
+
 ## Lisensi
 
 Proyek ini dilisensikan di bawah lisensi MIT. Lihat file [LICENSE](LICENSE) untuk informasi lebih lanjut.
