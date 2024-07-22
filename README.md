@@ -99,7 +99,7 @@ Kami menyambut kontribusi dari siapa pun. Untuk berkontribusi, silakan buat _pul
 
 ## Kontak
 
-Untuk informasi lebih lanjut, silakan hubungi __drat di [email@example.com](mailto:email@example.com).
+Untuk informasi lebih lanjut, silakan hubungi __drat di : http://drat.github.io
 
 ---
 
