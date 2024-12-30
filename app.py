@@ -27,6 +27,8 @@ Cara Menggunakan:
 4. Klik tombol "Lakukan Inferensi Audio" untuk menghasilkan suara.
 """
 
+import sys
+import os
 import gradio as gr
 import platform
 import json
@@ -37,9 +39,18 @@ import subprocess
 import time
 from g2p_id import G2P
 from themes import MetafisikTheme  # Impor tema custom dari themes.py
+import wget
+
 
 # Inisialisasi G2P (Grapheme to Phoneme)
 g2p = G2P()
+
+# Fullpath untuk command line tts
+bin_dir = os.path.split(sys.executable)[0]
+bin_tts = os.path.join(bin_dir, 'tts')
+
+# Direktori untuk menyimpan file WAV yang terbentuk
+output_dir = 'outputs'
 
 # Fungsi untuk mengecek apakah sistem operasi adalah macOS
 def is_mac_os():
@@ -57,6 +68,8 @@ params = {
     "config_path": "config.json",
     "out_path": "output.wav"
 }
+
+model_url = 'https://github.com/Wikidepia/indonesian-tts/releases/download/v1.2/checkpoint_1260000-inference.pth'
 
 SAMPLE_RATE = 16000
 device = None
@@ -89,11 +102,16 @@ def gen_voice(text, speaker_label, speed, language, progress=gr.Progress()):
     progress(0.2, desc="Mengonversi teks ke TTS")
 
     short_uuid = str(uuid.uuid4())[:8]
-    output_file = Path(f'outputs/{speaker}-{short_uuid}.wav')
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+    output_file = os.path.join(output_dir, f'{speaker}-{short_uuid}.wav')
+
+    if not os.path.exists(params['model_path']):
+        wget.download(model_url)
 
     # Perintah untuk menjalankan TTS
     command = [
-        "tts",
+        bin_tts,
         "--text", text_to_tts,
         "--model_path", params["model_path"],
         "--config_path", params["config_path"],
