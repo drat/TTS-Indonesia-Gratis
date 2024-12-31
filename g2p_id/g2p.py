@@ -62,12 +62,16 @@ PHONETIC_MAPPING = {
 
 dirname = os.path.dirname(__file__)
 
+
 # Predict pronounciation with BERT Masking
-# Read more: https://w11wo.github.io/posts/2022/04/predicting-phonemes-with-bert/
+# Read more:
+# https://w11wo.github.io/posts/2022/04/predicting-phonemes-with-bert/
 class Predictor:
     def __init__(self, model_path):
         # fmt: off
-        self.vocab = ['', '[UNK]', 'a', 'n', 'ê', 'e', 'i', 'r', 'k', 's', 't', 'g', 'm', 'u', 'l', 'p', 'o', 'd', 'b', 'h', 'c', 'j', 'y', 'f', 'w', 'v', 'z', 'x', 'q', '[mask]']
+        self.vocab = ['', '[UNK]', 'a', 'n', 'ê', 'e', 'i', 'r', 'k', 's', 't',
+                      'g', 'm', 'u', 'l', 'p', 'o', 'd', 'b', 'h', 'c', 'j',
+                      'y', 'f', 'w', 'v', 'z', 'x', 'q', '[mask]']
         self.mask_token_id = self.vocab.index("[mask]")
         # fmt: on
         self.session = onnxruntime.InferenceSession(model_path)
@@ -82,7 +86,8 @@ class Predictor:
         Returns:
             str: The predicted phonetic representation of the word.
         """
-        text = [self.vocab.index(c) if c != "e" else self.mask_token_id for c in word]
+        text = [self.vocab.index(c) if c != "e" else self.mask_token_id
+                for c in word]
         text.extend([0] * (32 - len(text)))  # Pad to 32 tokens
         inputs = np.array([text], dtype=np.int64)
         (predictions,) = self.session.run(None, {"input_4": inputs})
@@ -180,7 +185,8 @@ class G2P:
                 for v in ["i", "u"]:
                     # Replace with lax allphone [ɪ, ʊ] if
                     # in the middle of syllable without stress
-                    # and not ends with coda nasal [m, n, ng] (except for final syllable)
+                    # and not ends with coda nasal [m, n, ng] (except for final
+                    # syllable)
                     if (
                         v in syll
                         and not syll.startswith("ˈ")

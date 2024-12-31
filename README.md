@@ -31,13 +31,21 @@ Saat tulisan ini dibuat versi 3.12 belum cukup menyediakan modul yang dibutuhkan
 Selanjutnya clone source ini, lalu:
 
     $ ~/env/bin/pip install TTS-Indonesia-Gratis/
+
+Cobalah:
+
+    $ ~/env/bin/tts_drat --text="Selamat pagi"
+
+Kali pertama ia akan mengunduh `checkpoint_1260000-inference.pth` yang besarnya 330 MB. Biasanya tidak lebih dari 10 menit.
+
+Bisa juga melalui web browser, jalankan server-nya:
+
     $ cd TTS-Indonesia-Gratis
     $ ~/env/bin/python app.py
 
-Di web browser bukalah [http://127.0.0.1:7860](http://127.0.0.1:7860). Klik *Lakukan Inferensi Audio*.
-
-Kali pertama ia akan mengunduh `checkpoint_1260000-inference.pth` yang besarnya 330 MB. Biasanya tidak lebih dari 10 menit.
-Setelah selesai klik tombol play untuk mendengarkan. File WAV-nya tersimpan di direktori `outputs`.
+Di web browser bukalah [http://127.0.0.1:7860](http://127.0.0.1:7860). Klik
+*Lakukan Inferensi Audio*. Setelah selesai klik tombol *play* untuk
+mendengarkan. File WAV-nya tersimpan di direktori `outputs`.
 
 ## Pembicara yang Tersedia
 ![ardi](https://github.com/user-attachments/assets/d0b82dea-7b14-4347-91f5-27574d3bcbb1)

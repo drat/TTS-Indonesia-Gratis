@@ -12,6 +12,7 @@ dependencies = [
     'nltk>=3.7',
     'onnxruntime>=1.7.0',
     'wget',
+    'simpleaudio',
     ]
 requires-python = '>=3.6, <3.12'
 authors = [
@@ -24,3 +25,6 @@ classifiers = [
     'Programming Language :: Python :: 3',
     'Operating System :: OS Independent',
     ]
+
+[project.scripts]
+tts_drat = 'g2p_id.scripts.tts:main'
