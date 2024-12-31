@@ -1,3 +1,6 @@
 __pycache__
-checkpoint*.pth
+*.egg-info
+build
+*.pth
+*.json
 outputs

@@ -30,8 +30,8 @@ Saat tulisan ini dibuat versi 3.12 belum cukup menyediakan modul yang dibutuhkan
 
 Selanjutnya clone source ini, lalu:
 
+    $ ~/env/bin/pip install TTS-Indonesia-Gratis/
     $ cd TTS-Indonesia-Gratis
-    $ ~/env/bin/pip install -r requirements.txt
     $ ~/env/bin/python app.py
 
 Di web browser bukalah [http://127.0.0.1:7860](http://127.0.0.1:7860). Klik *Lakukan Inferensi Audio*.

@@ -37,13 +37,13 @@ import uuid
 import html
 import subprocess
 import time
-from g2p_id import G2P
+import g2p_id
 from themes import MetafisikTheme  # Impor tema custom dari themes.py
 import wget
 
 
 # Inisialisasi G2P (Grapheme to Phoneme)
-g2p = G2P()
+g2p = g2p_id.G2P()
 
 # Fullpath untuk command line tts
 bin_dir = os.path.split(sys.executable)[0]
@@ -51,6 +51,21 @@ bin_tts = os.path.join(bin_dir, 'tts')
 
 # Direktori untuk menyimpan file WAV yang terbentuk
 output_dir = 'outputs'
+
+# File konfigurasi
+data_dir = os.path.join(g2p_id.__path__[0], 'data')
+config_base_file = os.path.join(data_dir, 'config.json')
+speakers_file = os.path.join(data_dir, 'speakers.pth')
+config_file = 'config.json'
+if not os.path.exists(config_file):
+    with open(config_base_file) as f:
+        s = f.read()
+    d = json.loads(s)
+    d['model_args']['speakers_file'] = speakers_file
+    s = json.dumps(d)
+    with open(config_file, 'w') as f:
+        f.write(s)
+
 
 # Fungsi untuk mengecek apakah sistem operasi adalah macOS
 def is_mac_os():
