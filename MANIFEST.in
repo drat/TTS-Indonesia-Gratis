@@ -1,0 +1,1 @@
+recursive-include g2p_id *.json *.onnx *.pth

@@ -1,0 +1,30 @@
+[build-system]
+requires = ['setuptools >= 64']
+
+[project]
+name = 'g2p-id'
+version = '0.0.5'
+dependencies = [ 
+    'gradio>=5',
+    'torch',
+    'tts',
+    'sacremoses>=0.0.41',
+    'nltk>=3.7',
+    'onnxruntime>=1.7.0',
+    'wget',
+    'simpleaudio',
+    ]
+requires-python = '>=3.6, <3.12'
+authors = [
+    {name='Owo Sugiana', email='sugiana@gmail.com'},
+    ]
+description = 'Text to Speech Indonesia'
+readme = 'README.md'
+license = {text='GPL-3'}
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Operating System :: OS Independent',
+    ]
+
+[project.scripts]
+tts_drat = 'g2p_id.scripts.tts:main'
